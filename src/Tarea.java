@@ -1,11 +1,45 @@
 public class Tarea {
-    public String titulo;
-    public String responsable;
+    private String titulo;
+    private String responsable;
 
     // Atributos con acceso por defecto
-    double horasEstimadas;
-    boolean completada;
+    private double horasEstimadas;
+    private boolean completada;
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setResponsable(String responsable) {
+        this.responsable = responsable;
+    }
+
+    public String getResponsable() {
+        return responsable;
+    }
+
+    public void setHorasEstimadas(double horasEstimadas) {
+        if (horasEstimadas >= 0) {
+            this.horasEstimadas = horasEstimadas;
+        }
+    }
+
+    public double getHorasEstimadas() {
+        return horasEstimadas;
+    }
+
+    public void setCompletada(boolean completada) {
+        this.completada = completada;
+    }
+
+    public boolean isCompletada() {
+        return completada;
+    }
+    //----------------------------------------------------------------------------------------------------------------------
     // Métodos public
     public void mostrarInformacion() {
         System.out.println("Tarea: " + titulo + " Responsable: " + responsable + " Horas: " + horasEstimadas + " Completada: " + completada);
